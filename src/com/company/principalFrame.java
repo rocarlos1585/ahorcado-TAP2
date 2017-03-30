@@ -20,8 +20,9 @@ public class principalFrame{
 
     public int numeroPistas=3;
     String Palabra;
+    String palabraOculta;
 
-    JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra;
+    JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra, labelImagen;
 
     JButton botonPrueba1;
     JButton botonPrueba2;
@@ -48,17 +49,12 @@ public class principalFrame{
             categorias,
             categorias[0]);
 
-
-
-
     public principalFrame(){
 
         if(eleccionCategoria == "frutas"){
 
             Palabra = frutas[numRand];
-
             System.out.println(numRand);
-
         }
 
         else if(eleccionCategoria == "animales"){
@@ -126,15 +122,28 @@ public class principalFrame{
 
         JPImagen = new JPanel(new FlowLayout());
 
+        labelImagen = new JLabel();
 
+        ImageIcon imagen = new ImageIcon("C:\\Users\\Roberto\\IdeaProjects\\ahorcado-TAP2\\Drawables\\bob.jpg");
+
+        labelImagen.setIcon(imagen);
+        labelImagen.setSize(100,100);
+        labelImagen.setLocation(0,0);
+        labelImagen.setVisible(true);
+
+        /**
         botonPrueba1 = new JButton();
         botonPrueba1.setText("boton 1");
 
         botonPrueba2 = new JButton();
         botonPrueba2.setText("boton 2");
 
+
         JPImagen.add(botonPrueba1);
         JPImagen.add(botonPrueba2);
+        **/
+        JPImagen.add(labelImagen);
+
 
 
 
@@ -145,8 +154,17 @@ public class principalFrame{
 
         JPPalabra = new JPanel(new FlowLayout());
 
-        labelPalabra = new JLabel(Palabra);
 
+        palabraOculta = "";
+        for(int i=0; i<Palabra.length(); i++){
+            palabraOculta += " _ ";
+        }
+
+        Font fuente = new Font("Arial", Font.BOLD, 36);
+        labelPalabra = new JLabel(palabraOculta);
+        labelPalabra.setFont(fuente);
+
+        /**
         botonPrueba3 = new JButton();
         botonPrueba3.setText("boton 3");
 
@@ -159,7 +177,9 @@ public class principalFrame{
         JPPalabra.add(botonPrueba3);
         JPPalabra.add(botonPrueba4);
         JPPalabra.add(botonPrueba5);
+         **/
         JPPalabra.add(labelPalabra);
+
 
         JPPalabra.setVisible(true);
 
