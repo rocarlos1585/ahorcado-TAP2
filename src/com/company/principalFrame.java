@@ -4,12 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Random;
 
 /**
  * Created by robert on 3/28/17.
  */
-public class principalFrame{
+public class principalFrame implements KeyListener{
 
 
     public String[] categorias = {"frutas", "animales", "carrera"};
@@ -23,6 +25,8 @@ public class principalFrame{
     String palabraOculta;
 
     JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra, labelImagen;
+
+    JTextArea lecturaPalabra;
 
     JButton botonPrueba1;
     JButton botonPrueba2;
@@ -91,6 +95,7 @@ public class principalFrame{
         frame.add(JPImagen);
         frame.add(JPPalabra);
 
+
         frame.setLocation(300, 50);
         frame.setResizable(true);
         frame.setVisible(true);
@@ -124,28 +129,14 @@ public class principalFrame{
 
         labelImagen = new JLabel();
 
-        ImageIcon imagen = new ImageIcon("C:\\Users\\Roberto\\IdeaProjects\\ahorcado-TAP2\\Drawables\\bob.jpg");
+        ImageIcon imagen = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/Drawables/doge.jpg");
 
         labelImagen.setIcon(imagen);
         labelImagen.setSize(100,100);
         labelImagen.setLocation(0,0);
         labelImagen.setVisible(true);
 
-        /**
-        botonPrueba1 = new JButton();
-        botonPrueba1.setText("boton 1");
-
-        botonPrueba2 = new JButton();
-        botonPrueba2.setText("boton 2");
-
-
-        JPImagen.add(botonPrueba1);
-        JPImagen.add(botonPrueba2);
-        **/
         JPImagen.add(labelImagen);
-
-
-
 
         JPImagen.setVisible(true);
     }
@@ -164,31 +155,40 @@ public class principalFrame{
         labelPalabra = new JLabel(palabraOculta);
         labelPalabra.setFont(fuente);
 
-        /**
-        botonPrueba3 = new JButton();
-        botonPrueba3.setText("boton 3");
+        lecturaPalabra = new JTextArea();
+        lecturaPalabra.setLineWrap(true);
+        lecturaPalabra.addKeyListener(this);
+        lecturaPalabra.setVisible(false);
 
-        botonPrueba4 = new JButton();
-        botonPrueba4.setText("boton 4");
-
-        botonPrueba5 = new JButton();
-        botonPrueba5.setText("boton 5");
-
-        JPPalabra.add(botonPrueba3);
-        JPPalabra.add(botonPrueba4);
-        JPPalabra.add(botonPrueba5);
-         **/
+        JPPalabra.add(lecturaPalabra);
         JPPalabra.add(labelPalabra);
-
+        //JPPalabra.addKeyListener(this);
 
         JPPalabra.setVisible(true);
 
+    }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+        if(e.getSource()==lecturaPalabra) {
+            if (e.VK_E == e.getKeyCode()) {
+                System.out.println("presiono la tecla e");
+            }
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
 
     }
 
     public class listenerBotones implements ActionListener{
-
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -208,7 +208,6 @@ public class principalFrame{
             }
 
         }
-
 
     }
 
