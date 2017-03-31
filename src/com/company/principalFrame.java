@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  * Created by robert on 3/28/17.
  */
-public class principalFrame implements KeyListener{
+public class principalFrame{
 
 
     public String[] categorias = {"frutas", "animales", "carrera"};
@@ -25,8 +25,6 @@ public class principalFrame implements KeyListener{
     String palabraOculta;
 
     JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra, labelImagen;
-
-    JTextArea lecturaPalabra;
 
     JButton botonPrueba1;
     JButton botonPrueba2;
@@ -95,7 +93,22 @@ public class principalFrame implements KeyListener{
         frame.add(JPImagen);
         frame.add(JPPalabra);
 
+        frame.addKeyListener(new KeyListener(){
 
+
+            @Override
+            public void keyTyped(KeyEvent e) {}
+
+            @Override
+            public void keyReleased(KeyEvent e) {}
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                System.out.println("Pressed " + e.getKeyChar());
+            }
+        });
+        frame.setFocusable(true);
+        frame.requestFocusInWindow();
         frame.setLocation(300, 50);
         frame.setResizable(true);
         frame.setVisible(true);
@@ -129,7 +142,7 @@ public class principalFrame implements KeyListener{
 
         labelImagen = new JLabel();
 
-        ImageIcon imagen = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/Drawables/doge.jpg");
+        ImageIcon imagen = new ImageIcon("/home/roberto/IdeaProjects/ahorcado-TAP2/doge.jpg");
 
         labelImagen.setIcon(imagen);
         labelImagen.setSize(100,100);
@@ -141,13 +154,12 @@ public class principalFrame implements KeyListener{
         JPImagen.setVisible(true);
     }
 
-    public void JPanelPalabra(){
+    public void JPanelPalabra() {
 
         JPPalabra = new JPanel(new FlowLayout());
 
-
         palabraOculta = "";
-        for(int i=0; i<Palabra.length(); i++){
+        for (int i = 0; i < Palabra.length(); i++) {
             palabraOculta += " _ ";
         }
 
@@ -155,38 +167,32 @@ public class principalFrame implements KeyListener{
         labelPalabra = new JLabel(palabraOculta);
         labelPalabra.setFont(fuente);
 
-        lecturaPalabra = new JTextArea();
-        lecturaPalabra.setLineWrap(true);
-        lecturaPalabra.addKeyListener(this);
-        lecturaPalabra.setVisible(false);
-
-        JPPalabra.add(lecturaPalabra);
         JPPalabra.add(labelPalabra);
-        //JPPalabra.addKeyListener(this);
 
+        JPPalabra.setFocusable(true);
+        JPPalabra.requestFocusInWindow();
         JPPalabra.setVisible(true);
 
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
 
-    }
+    /**public class listenerTeclado implements KeyListener{
 
-    @Override
-    public void keyPressed(KeyEvent e) {
+        @Override
+        public void keyTyped(KeyEvent e) {
 
-        if(e.getSource()==lecturaPalabra) {
-            if (e.VK_E == e.getKeyCode()) {
-                System.out.println("presiono la tecla e");
-            }
         }
-    }
 
-    @Override
-    public void keyReleased(KeyEvent e) {
+        @Override
+        public void keyPressed(KeyEvent e) {
 
-    }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+        }
+    }**/
 
     public class listenerBotones implements ActionListener{
 
@@ -197,7 +203,6 @@ public class principalFrame implements KeyListener{
                 numeroPistas--;
 
                 botonPista.setText("Pistas: "+numeroPistas);
-
                 if(numeroPistas==0){
 
                     JOptionPane.showMessageDialog(null,"se teminaron tus pistas");
@@ -205,10 +210,21 @@ public class principalFrame implements KeyListener{
                 }
 
 
+                JPPalabra.setFocusable(true);
+                JPPalabra.requestFocusInWindow();
+                JPPalabra.addKeyListener(new KeyListener() {
+                    @Override
+                    public void keyTyped(KeyEvent e) {}
+
+                    @Override
+                    public void keyPressed(KeyEvent e) {
+                        System.out.println(e.getKeyChar());
+                    }
+
+                    @Override
+                    public void keyReleased(KeyEvent e) {}
+                });
             }
-
         }
-
     }
-
 }
