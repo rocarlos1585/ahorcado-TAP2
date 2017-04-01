@@ -21,8 +21,13 @@ public class principalFrame{
 
 
     public int numeroPistas=3;
+    int contadorDePistas=0;
+    int contadorDeIntentos=5;
+
     String Palabra;
     String palabraOculta;
+
+    char letraTecleada;
 
     JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra, labelImagen;
 
@@ -38,7 +43,7 @@ public class principalFrame{
     JPanel JPPalabra;
 
     Random rand = new Random(System.currentTimeMillis());
-    int numRand = rand.nextInt(4);
+    int numRand = 0;//rand.nextInt(4);
 
 
     String nombre = (String)JOptionPane.showInputDialog("cual es tu nombre?");
@@ -53,28 +58,18 @@ public class principalFrame{
 
     public principalFrame(){
 
-        if(eleccionCategoria == "frutas"){
+        if(eleccionCategoria == "frutas"){Palabra = frutas[numRand];    System.out.println(numRand);}
 
-            Palabra = frutas[numRand];
-            System.out.println(numRand);
-        }
+        else if(eleccionCategoria == "animales"){Palabra = animales[numRand];    System.out.println(numRand);}
 
-        else if(eleccionCategoria == "animales"){
-            Palabra = animales[numRand];
-            System.out.println(numRand);
-        }
-
-        else if(eleccionCategoria == "carrera"){
-            Palabra = carrera [numRand];
-            System.out.println(numRand);
-        }
+        else if(eleccionCategoria == "carrera"){Palabra = carrera [numRand];    System.out.println(numRand);}
 
 
         JFrame frame = new JFrame("Ahorcado");
         frame.setLayout(null);
 
-       System.out.println(nombre);
-       System.out.println(eleccionCategoria);
+        System.out.println(nombre);
+        System.out.println(eleccionCategoria);
 
         JPanelDatos();
         JPanelImagen();
@@ -104,9 +99,15 @@ public class principalFrame{
 
             @Override
             public void keyPressed(KeyEvent e) {
+
+                letraTecleada=e.getKeyChar();
+                System.out.println(letraTecleada);
                 System.out.println("Pressed " + e.getKeyChar());
+                contadorDeIntentos--;
+                System.out.println(contadorDeIntentos);
             }
         });
+
         frame.setFocusable(true);
         frame.requestFocusInWindow();
         frame.setLocation(300, 50);
@@ -124,7 +125,7 @@ public class principalFrame{
         labelCategoria.setBounds(0,50,100,60);
 
         botonPista = new JButton();
-        botonPista.setText("Pistas: "+numeroPistas);
+        botonPista.setText("Pistas: 3");
         botonPista.addActionListener(new listenerBotones());
 
         labelNombre = new JLabel("nombre: "+nombre);
@@ -142,7 +143,7 @@ public class principalFrame{
 
         labelImagen = new JLabel();
 
-        ImageIcon imagen = new ImageIcon("/home/roberto/IdeaProjects/ahorcado-TAP2/doge.jpg");
+        ImageIcon imagen = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/doge.jpg");
 
         labelImagen.setIcon(imagen);
         labelImagen.setSize(100,100);
@@ -200,13 +201,28 @@ public class principalFrame{
         public void actionPerformed(ActionEvent e) {
 
             if (e.getSource().equals(botonPista)){
-                numeroPistas--;
 
-                botonPista.setText("Pistas: "+numeroPistas);
-                if(numeroPistas==0){
+
+                if (Palabra =="mango" && contadorDePistas==0){
+                    JOptionPane.showMessageDialog(null,"esta fruta es originaria de la india");
+                    contadorDePistas++;
+                    botonPista.setText("Pistas: 2");
+                }
+
+                else if (Palabra == "mango" && contadorDePistas == 1){
+                    JOptionPane.showMessageDialog(null,"las hojas del arbol de esta fruta se usan para el tratamiento de la diabetes");
+                    contadorDePistas++;
+                    botonPista.setText("Pistas: 1");
+                }
+
+                else if(Palabra == "mango" && contadorDePistas == 2){
+                    JOptionPane.showMessageDialog(null,"las hojas de la mata de esta fruta son toxicas para las vacas");
 
                     JOptionPane.showMessageDialog(null,"se teminaron tus pistas");
                     botonPista.setEnabled(false);
+
+                    botonPista.setText("Pistas: 0");
+                    contadorDePistas++;
                 }
 
 
@@ -218,7 +234,7 @@ public class principalFrame{
 
                     @Override
                     public void keyPressed(KeyEvent e) {
-                        System.out.println(e.getKeyChar());
+                        System.out.println("se presiono la tecla :"+e.getKeyChar()+" y la palabra a adivinar es: "+Palabra);
                     }
 
                     @Override
