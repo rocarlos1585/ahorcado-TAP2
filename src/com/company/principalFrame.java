@@ -100,11 +100,21 @@ public class principalFrame{
             @Override
             public void keyPressed(KeyEvent e) {
 
-                letraTecleada=e.getKeyChar();
-                System.out.println(letraTecleada);
-                System.out.println("Pressed " + e.getKeyChar());
-                contadorDeIntentos--;
-                System.out.println(contadorDeIntentos);
+
+                if (contadorDeIntentos > 0) {
+
+                    letraTecleada = e.getKeyChar();
+                    System.out.println(letraTecleada);
+                    System.out.println("Pressed " + e.getKeyChar());
+                    //contadorDeIntentos--;
+                    System.out.println(contadorDeIntentos);
+
+                    recorridoPalabra();
+                }
+
+                else{
+                    JOptionPane.showMessageDialog(null, "se terminaron tus intentos");
+                }
             }
         });
 
@@ -143,7 +153,7 @@ public class principalFrame{
 
         labelImagen = new JLabel();
 
-        ImageIcon imagen = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/doge.jpg");
+        ImageIcon imagen = new ImageIcon("/home/roberto/IdeaProjects/ahorcado-TAP2/doge.jpg");
 
         labelImagen.setIcon(imagen);
         labelImagen.setSize(100,100);
@@ -176,6 +186,18 @@ public class principalFrame{
 
     }
 
+    public void recorridoPalabra(){
+
+        for (int i=0; i<Palabra.length();i++){
+            if(Palabra.charAt(i)==letraTecleada){
+                System.out.println("hola");
+            }
+            else{
+                contadorDeIntentos--;
+            }
+
+        }
+    }
 
     /**public class listenerTeclado implements KeyListener{
 
@@ -234,7 +256,23 @@ public class principalFrame{
 
                     @Override
                     public void keyPressed(KeyEvent e) {
-                        System.out.println("se presiono la tecla :"+e.getKeyChar()+" y la palabra a adivinar es: "+Palabra);
+
+                        //contadorDeIntentos=Palabra.length();
+
+                        if (contadorDeIntentos > 0) {
+
+                            letraTecleada = e.getKeyChar();
+                            System.out.println(letraTecleada);
+                            System.out.println("Pressed " + e.getKeyChar());
+                            //contadorDeIntentos--;
+                            System.out.println(contadorDeIntentos);
+
+                            recorridoPalabra();
+                        }
+
+                        else{
+                            JOptionPane.showMessageDialog(null, "se terminaron tus intentos");
+                        }
                     }
 
                     @Override
