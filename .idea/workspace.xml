@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a05a5f23-740a-4cc6-be92-f553cc21003c" name="Default" comment="quinto commit:ya me funciona el key listener, ahora lo que estoy tratando de hacer es que lo deje de leer cuando ya no este habilitado el boton de pistas">
+    <list default="true" id="a05a5f23-740a-4cc6-be92-f553cc21003c" name="Default" comment="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ahorcado-TAP/com/company/principalFrame.class" afterPath="$PROJECT_DIR$/out/production/ahorcado-TAP/com/company/principalFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/principalFrame.java" afterPath="$PROJECT_DIR$/src/com/company/principalFrame.java" />
@@ -38,9 +38,12 @@
       <file leaf-file-name="principalFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/principalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1222">
-              <caret line="153" column="35" lean-forward="true" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+            <state relative-caret-position="180">
+              <caret line="199" column="62" lean-forward="false" selection-start-line="199" selection-start-column="62" selection-end-line="199" selection-end-column="62" />
               <folding>
+                <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+                <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+                <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
                 <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
               </folding>
             </state>
@@ -57,6 +60,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="roberto TOSHIBA" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -79,10 +87,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="30" />
-    <option name="width" value="1368" />
-    <option name="height" value="739" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -607,7 +614,10 @@
       <workItem from="1491089757440" duration="253000" />
       <workItem from="1491394867184" duration="3740000" />
       <workItem from="1491612709530" duration="1243000" />
-      <workItem from="1492407014984" duration="498000" />
+      <workItem from="1492407014984" duration="824000" />
+      <workItem from="1493389201158" duration="2277000" />
+      <workItem from="1493681864888" duration="138000" />
+      <workItem from="1493682043350" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="cuarto commit: se implemento la interface KeyListener junto con sus metodos y se esta tratando que escuche las teclas que presiono pero sin que se vea el JTextArea, lo cual aun no consigo.">
       <created>1490935220877</created>
@@ -616,26 +626,32 @@
       <option name="project" value="LOCAL" />
       <updated>1490935220877</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos">
+      <created>1492407592592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1492407592592</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28219000" />
+    <option name="totallyTimeSpent" value="31040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
+    <frame x="0" y="30" width="1366" height="738" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22515528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32503888" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22395024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -652,6 +668,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -673,50 +690,51 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="segundo commit: termine de acomodar los pane, se agregaron los labels y genera numeros aleatorios para seleccionar la palabra que se va a adivinar" />
     <MESSAGE value="cuarto commit: se implemento la interface KeyListener junto con sus metodos y se esta tratando que escuche las teclas que presiono pero sin que se vea el JTextArea, lo cual aun no consigo." />
-    <option name="LAST_COMMIT_MESSAGE" value="cuarto commit: se implemento la interface KeyListener junto con sus metodos y se esta tratando que escuche las teclas que presiono pero sin que se vea el JTextArea, lo cual aun no consigo." />
+    <MESSAGE value="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos" />
+    <option name="LAST_COMMIT_MESSAGE" value="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>239</line>
+          <line>243</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>233</line>
+          <line>237</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>227</line>
+          <line>231</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>229</line>
+          <line>233</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>235</line>
+          <line>239</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>245</line>
+          <line>249</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/principalFrame.java</url>
-          <line>246</line>
+          <line>250</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -743,6 +761,9 @@
         <state relative-caret-position="3165">
           <caret line="211" column="41" lean-forward="false" selection-start-line="211" selection-start-column="41" selection-end-line="211" selection-end-column="41" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -761,6 +782,9 @@
         <state relative-caret-position="2160">
           <caret line="144" column="84" lean-forward="false" selection-start-line="144" selection-start-column="84" selection-end-line="144" selection-end-column="84" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -779,6 +803,9 @@
         <state relative-caret-position="2400">
           <caret line="160" column="39" lean-forward="false" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -797,6 +824,9 @@
         <state relative-caret-position="2880">
           <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -815,6 +845,9 @@
         <state relative-caret-position="420">
           <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -833,6 +866,9 @@
         <state relative-caret-position="1200">
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -851,6 +887,9 @@
         <state relative-caret-position="870">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -869,6 +908,9 @@
         <state relative-caret-position="480">
           <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -895,6 +937,9 @@
         <state relative-caret-position="308">
           <caret line="182" column="55" lean-forward="true" selection-start-line="182" selection-start-column="55" selection-end-line="182" selection-end-column="55" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -913,6 +958,9 @@
         <state relative-caret-position="420">
           <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -931,6 +979,9 @@
         <state relative-caret-position="1200">
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -949,6 +1000,9 @@
         <state relative-caret-position="870">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -967,6 +1021,9 @@
         <state relative-caret-position="480">
           <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -993,6 +1050,9 @@
         <state relative-caret-position="-2334">
           <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1011,6 +1071,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1029,6 +1092,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1047,6 +1113,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1065,6 +1134,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1083,6 +1155,9 @@
         <state relative-caret-position="420">
           <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1101,6 +1176,9 @@
         <state relative-caret-position="1200">
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1119,6 +1197,9 @@
         <state relative-caret-position="870">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1137,6 +1218,9 @@
         <state relative-caret-position="480">
           <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>
@@ -1159,9 +1243,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/principalFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1222">
-          <caret line="153" column="35" lean-forward="true" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+        <state relative-caret-position="180">
+          <caret line="199" column="62" lean-forward="false" selection-start-line="199" selection-start-column="62" selection-end-line="199" selection-end-column="62" />
           <folding>
+            <element signature="method#principalFrame#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelDatos#0;class#principalFrame#0" expanded="false" />
+            <element signature="method#JPanelImagen#0;class#principalFrame#0" expanded="false" />
             <element signature="docComment;class#listenerBotones#0;class#principalFrame#0" expanded="false" />
           </folding>
         </state>

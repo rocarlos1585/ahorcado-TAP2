@@ -188,15 +188,19 @@ public class principalFrame{
 
     public void recorridoPalabra(){
 
-        for (int i=0; i<Palabra.length();i++){
-            if(Palabra.charAt(i)==letraTecleada){
-                System.out.println("hola");
-            }
-            else{
-                contadorDeIntentos--;
+        if(contadorDeIntentos>0) {
+
+            if (Palabra.indexOf(letraTecleada) != -1) {
+
+                System.out.println("si existe la letra en la palabra");
             }
 
+            else {
+                contadorDeIntentos--;
+                System.out.println("se desconto un intento ");
+            }
         }
+
     }
 
     /**public class listenerTeclado implements KeyListener{
