@@ -24,11 +24,14 @@ public class principalFrame{
     int contadorDePistas=0;
     int contadorDeIntentos=5;
 
+
     String Palabra;
+    String Palabra2;
     String palabraOculta;
 
     char letraTecleada;
-
+    char [] palabraArreglo;
+    char [] palabraOcultaArreglo;
     JLabel labelNombre, labelCategoria, labelPuntos, labelPalabra, labelImagen;
 
     JButton botonPrueba1;
@@ -153,7 +156,7 @@ public class principalFrame{
 
         labelImagen = new JLabel();
 
-        ImageIcon imagen = new ImageIcon("/home/roberto/IdeaProjects/ahorcado-TAP2/doge.jpg");
+        ImageIcon imagen = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/doge.jpg");
 
         labelImagen.setIcon(imagen);
         labelImagen.setSize(100,100);
@@ -168,6 +171,8 @@ public class principalFrame{
     public void JPanelPalabra() {
 
         JPPalabra = new JPanel(new FlowLayout());
+
+        //WACHA LOS PUTOS ESPACIOS
 
         palabraOculta = "";
         for (int i = 0; i < Palabra.length(); i++) {
@@ -188,38 +193,42 @@ public class principalFrame{
 
     public void recorridoPalabra(){
 
+        palabraArreglo = Palabra.toCharArray();
+        palabraOcultaArreglo = palabraOculta.toCharArray();
+
+        if(Palabra == palabraOculta){
+            System.out.println("ganaste");
+        }
+
         if(contadorDeIntentos>0) {
 
-            if (Palabra.indexOf(letraTecleada) != -1) {
+            for (int i = 0; i < Palabra.length(); i++) {
 
-                System.out.println("si existe la letra en la palabra");
+                if (palabraArreglo[i] == letraTecleada) {
+                    palabraOcultaArreglo[i] = letraTecleada;
+                }
             }
 
-            else {
+            if(Palabra.indexOf(letraTecleada)!= -1){
+                System.out.println("si existe la letra letra en la palabra");
+            }
+            else{
                 contadorDeIntentos--;
-                System.out.println("se desconto un intento ");
+                System.out.println("se desconto un intento");
             }
         }
+
+        palabraOculta = String.valueOf(palabraOcultaArreglo);
+        Palabra2 = String.valueOf(palabraArreglo);
+
+        System.out.println(palabraOculta);
+        labelPalabra.setText(palabraOculta);
+
+
+
 
     }
 
-    /**public class listenerTeclado implements KeyListener{
-
-        @Override
-        public void keyTyped(KeyEvent e) {
-
-        }
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-
-        }
-
-        @Override
-        public void keyReleased(KeyEvent e) {
-
-        }
-    }**/
 
     public class listenerBotones implements ActionListener{
 
