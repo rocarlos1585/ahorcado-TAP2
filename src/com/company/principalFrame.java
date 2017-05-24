@@ -104,7 +104,7 @@ public class principalFrame{
             public void keyPressed(KeyEvent e) {
 
 
-                if (contadorDeIntentos > 0) {
+                if (contadorDeIntentos > 1) {
 
                     letraTecleada = e.getKeyChar();
                     System.out.println(letraTecleada);
@@ -176,7 +176,7 @@ public class principalFrame{
 
         palabraOculta = "";
         for (int i = 0; i < Palabra.length(); i++) {
-            palabraOculta += " _ ";
+            palabraOculta += "*";
         }
 
         Font fuente = new Font("Arial", Font.BOLD, 36);
@@ -196,11 +196,9 @@ public class principalFrame{
         palabraArreglo = Palabra.toCharArray();
         palabraOcultaArreglo = palabraOculta.toCharArray();
 
-        if(Palabra == palabraOculta){
-            System.out.println("ganaste");
-        }
+        //if(palabraOculta.equals(Palabra)){System.out.println("ganaste");}
 
-        if(contadorDeIntentos>0) {
+        if(contadorDeIntentos>1) {
 
             for (int i = 0; i < Palabra.length(); i++) {
 
@@ -213,8 +211,51 @@ public class principalFrame{
                 System.out.println("si existe la letra letra en la palabra");
             }
             else{
+                if(contadorDeIntentos==5){
                 contadorDeIntentos--;
-                System.out.println("se desconto un intento");
+                JOptionPane.showMessageDialog(null, "la letra: "+letraTecleada+" no existe en la palabra");
+
+                ImageIcon imagen1 = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/ahorcado1.png");
+                labelImagen.setIcon(imagen1);
+                labelImagen.setVisible(true);
+                }
+
+                else if(contadorDeIntentos==4){
+                    contadorDeIntentos--;
+                    JOptionPane.showMessageDialog(null, "la letra: "+letraTecleada+ " no existe en la palabra");
+
+                    ImageIcon imagen2 = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/ahorcado2.png");
+                    labelImagen.setIcon(imagen2);
+                    labelImagen.setVisible(true);
+                }
+
+                else if(contadorDeIntentos==3){
+                    contadorDeIntentos--;
+                    JOptionPane.showMessageDialog(null, "la letra: "+letraTecleada+ " no existe en la palabra");
+
+                    ImageIcon imagen3 = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/ahorcado3.png");
+                    labelImagen.setIcon(imagen3);
+                    labelImagen.setVisible(true);
+                }
+
+                else if(contadorDeIntentos==2){
+                    contadorDeIntentos--;
+                    JOptionPane.showMessageDialog(null, "la letra: "+letraTecleada+ " no existe en la palabra");
+
+                    ImageIcon imagen4 = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/ahorcado4.png");
+                    labelImagen.setIcon(imagen4);
+                    labelImagen.setVisible(true);
+
+                }
+
+                else if(contadorDeIntentos==1){
+                    contadorDeIntentos--;
+                    JOptionPane.showMessageDialog(null, "la letra: "+letraTecleada+ " no existe en la palabra");
+
+                    ImageIcon imagen1 = new ImageIcon("/home/robert/IdeaProjects/ahorcado-TAP2/ahorcado5.png");
+                    labelImagen.setIcon(imagen1);
+                    labelImagen.setVisible(true);
+                }
             }
         }
 
@@ -223,6 +264,10 @@ public class principalFrame{
 
         System.out.println(palabraOculta);
         labelPalabra.setText(palabraOculta);
+
+        if(palabraOculta.equals(Palabra)){
+            JOptionPane.showMessageDialog(null, " ¡¡¡FELICIDADES!!!\n    Has Ganado");
+        }
 
 
 
@@ -272,7 +317,7 @@ public class principalFrame{
 
                         //contadorDeIntentos=Palabra.length();
 
-                        if (contadorDeIntentos > 0) {
+                        if (contadorDeIntentos > 1) {
 
                             letraTecleada = e.getKeyChar();
                             System.out.println(letraTecleada);

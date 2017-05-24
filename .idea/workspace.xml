@@ -38,8 +38,8 @@
       <file leaf-file-name="principalFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/principalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="174" column="34" lean-forward="false" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+            <state relative-caret-position="149">
+              <caret line="241" column="41" lean-forward="true" selection-start-line="241" selection-start-column="41" selection-end-line="241" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +90,7 @@
     <option name="height" value="739" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -103,57 +103,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ahorcado-TAP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -616,7 +566,10 @@
       <workItem from="1493389201158" duration="2277000" />
       <workItem from="1493681864888" duration="138000" />
       <workItem from="1493682043350" duration="80000" />
-      <workItem from="1495049134581" duration="7710000" />
+      <workItem from="1495049134581" duration="8393000" />
+      <workItem from="1495505279773" duration="1441000" />
+      <workItem from="1495583564723" duration="886000" />
+      <workItem from="1495593822776" duration="1802000" />
     </task>
     <task id="LOCAL-00001" summary="cuarto commit: se implemento la interface KeyListener junto con sus metodos y se esta tratando que escuche las teclas que presiono pero sin que se vea el JTextArea, lo cual aun no consigo.">
       <created>1490935220877</created>
@@ -632,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492407592592</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="octavo commit: ya se hace el recorrido de la palabra correctamente, solo que hay un problema con la palabra oculta, despues de cada guion bajo hay un espacio por lo cual eso altera al hacer el valueOf, se tiene que corregir eso y queda listo">
+      <created>1495076640041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1495076640041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44938000" />
+    <option name="totallyTimeSpent" value="49750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
@@ -691,7 +651,8 @@
     <MESSAGE value="segundo commit: termine de acomodar los pane, se agregaron los labels y genera numeros aleatorios para seleccionar la palabra que se va a adivinar" />
     <MESSAGE value="cuarto commit: se implemento la interface KeyListener junto con sus metodos y se esta tratando que escuche las teclas que presiono pero sin que se vea el JTextArea, lo cual aun no consigo." />
     <MESSAGE value="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos" />
-    <option name="LAST_COMMIT_MESSAGE" value="septimo commit: agrege un metodo que se llama recorridoPalabra() y hay un error en el conteo de los intentos" />
+    <MESSAGE value="octavo commit: ya se hace el recorrido de la palabra correctamente, solo que hay un problema con la palabra oculta, despues de cada guion bajo hay un espacio por lo cual eso altera al hacer el valueOf, se tiene que corregir eso y queda listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="octavo commit: ya se hace el recorrido de la palabra correctamente, solo que hay un problema con la palabra oculta, despues de cada guion bajo hay un espacio por lo cual eso altera al hacer el valueOf, se tiene que corregir eso y queda listo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1133,8 +1094,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/principalFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="174" column="34" lean-forward="false" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+        <state relative-caret-position="149">
+          <caret line="241" column="41" lean-forward="true" selection-start-line="241" selection-start-column="41" selection-end-line="241" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
